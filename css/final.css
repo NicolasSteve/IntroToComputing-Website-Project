@@ -1,0 +1,600 @@
+@import url('https://fonts.googleaps.com/css2?family=Poppins:wgth@300;400;500;600;700;800;900&diplay=swap');
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family:'Poppins', sans-serif;
+}
+:root {
+    --bg-color: #3aafa9;
+    --second-bg-color: #2b7a78;
+    --text-color: #000000;
+    --main-color: rgb(0, 198, 238);
+}
+ html {
+ font-size: 62.5%;
+ overflow-x: hidden;
+
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: var(--bg-color);
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: var(--second-bg-color);
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+}
+.home-img{
+    width: 35vw;
+}
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+
+}
+span {
+    color: white;
+}
+.home-content h1{
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.home-content p{
+font-size: 1.8rem;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+.social-media a:hover{
+ background: var(--bg-color);
+ color: var(--main-color);
+ box-shadow: 0 0 1rem var(--main-color);
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+    
+
+}
+.btn:hover{
+    box-shadow: none;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--bg-color);
+}
+.about-img img{
+    width: 35vw;
+   
+}
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+
+}
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+
+}
+.about-content h3{
+ font-size: 2.6rem;
+}
+
+.about-content p{
+font-size: 1.6rem;
+margin: 2rem 0 3rem;
+}
+#hobbies{
+    background: var(--bg-color);
+    
+}
+.hobbies-container{
+  grid-gap: 40px;
+ flex-direction: column;
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+ margin-top: 50px;
+}
+.hobbies{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+.hobbies img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+
+}
+.hobbies video{
+    width: 100%;
+    border-radius: 30%;
+    display: block;
+    height: 65%;
+}
+.hobbies h3{
+    font-size: 3rem;
+    color: aqua;
+}
+.hobbies p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+    color: white;
+
+
+}
+.schools{
+    background: var(--bg-color);
+}
+.schools h2{
+    margin-bottom: 4rem;
+    
+
+}
+.schools-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+.schools-container .schools-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden; 
+    display: flex;
+
+}
+.schools-box img{
+    width: 100%;
+    transition: .5s ease;
+
+}
+.schools-box:hover img{
+    transform: scale(1.1);
+
+
+}
+.schools-box .schools-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0,0,0, .1),var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.schools-box:hover .schools-layer{
+
+    transform: translateY(0);
+}
+.schools-layer h4{
+    font-size: 3rem;
+    color: aqua;
+    
+}
+.schools-layer p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+    color: white;
+}
+.contact h2{
+
+    margin-bottom: 3rem;
+}
+.contact{
+    background: var(--bg-color);
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: white;
+    border-radius: .8rem;
+    margin: .7rem;
+
+}
+.contact form .input-box input{
+    width: 79%;
+}
+.contact form textarea{
+    resize: none;
+
+}
+.contact form .btn{
+    margin-top: 2rem;
+    cursor: pointer;
+
+}
+
+
+
+/* 1792x828px at 326ppi */
+@media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 2) {
+ #homes{
+    margin-left: 30%;
+    
+ }
+
+ #home-img{
+    margin-right: 80%;
+}
+.about-content{
+    margin-left:50%;
+    
+
+ }
+ .schools-container{
+  grid-template-columns: 1fr;
+ }
+
+.aboutimg{
+    width: 70%;
+    margin-left: 60%;
+    margin-bottom: 60%;
+    
+}
+
+#hobbies1{
+    margin-left: 15%;
+    width: 150%;
+    
+}
+.schools{
+    padding-bottom: 7rem;
+}
+#schools1{
+    margin-left: 0%;
+    width: 180%;
+}
+#contact1{
+    margin-left: 5%;
+    width: 180%;
+
+}
+    } 
+/* Media query for iPhone 12 Pro */
+@media only screen 
+    and (min-device-width: 390px) 
+    and (max-device-width: 844px) 
+    and (-webkit-min-device-pixel-ratio: 3) {
+   
+        #homes{
+            margin-left: 30%;
+            
+         }
+        
+         #home-img{
+            margin-left: 40%;
+            width: 40%;
+        }
+        .aboutimg{
+            width: 90%;
+            margin-left: 60%;
+            margin-bottom:70%;
+            
+        }
+        
+        #hobbies1{
+            margin-left: 50%;
+            width: 100%;
+            
+        }
+        .schools-container{
+            grid-template-columns: 1fr;
+           }
+           .schools{
+            padding-bottom: 7rem;
+        }
+        
+            #schools1{
+            margin-left: 10%;
+            width: 170%;
+        }
+        #contact1{
+            margin-left: 40%;
+            width: 100%;
+        
+        }
+}
+/* Ipad mini */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #homes{
+        margin-left: 5%;
+        
+     }
+    
+     #home-img{
+        margin-left: 60%;
+        width: 60%;
+    }
+    .aboutimg{
+        width: 90%;
+        margin-left: 10%;
+        margin-bottom:30%;
+        
+    }
+    
+    #hobbies1{
+        margin-left: 30%;
+        width: 100%;
+        
+    }
+    #schools1{
+        margin-left: 30%;
+        width: 100%;
+    }
+    .schools-container{
+        grid-template-columns: 1fr;
+       }
+       .schools{
+        padding-bottom: 7rem;
+    }
+    #contact1{
+        margin-left: 15%;
+        width: 100%;
+    
+    }
+}
+
+/* iPad Air (all models) */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #homes{
+        margin-left: 0%;
+        
+     }
+    
+     #home-img{
+        margin-left: 60%;
+        width: 60%;
+    }
+    .aboutimg{
+        width: 90%;
+        margin-left: 10%;
+        margin-bottom:30%;
+        
+    }
+    
+    #hobbies1{
+        margin-left: 0%;
+        width: 100%;
+        
+    }
+    #schools1{
+        margin-left: 0%;
+        width: 100%;
+    }
+    .schools-container{
+        grid-template-columns: 1fr;
+       }
+       .schools{
+        padding-bottom: 7rem;
+    }
+    #contact1{
+        margin-left: 0%;
+        width: 100%;
+    
+    }
+}
+/* iPad Pro (all models) */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #homes{
+        margin-left: 0%;
+        
+     }
+    
+     #home-img{
+        margin-left: 60%;
+        width: 60%;
+    }
+    .aboutimg{
+        width: 90%;
+        margin-left: 10%;
+        margin-bottom:30%;
+        
+    }
+    
+    #hobbies1{
+        margin-left: 0%;
+        width: 100%;
+        
+    }
+    #schools1{
+        margin-left: 0%;
+        width: 100%;
+    }
+    .schools-container{
+        grid-template-columns: 1fr;
+       }
+       .schools{
+        padding-bottom: 7rem;
+    }
+    #contact1{
+        margin-left: 0%;
+        width: 100%;
+    
+    }
+    
+}
